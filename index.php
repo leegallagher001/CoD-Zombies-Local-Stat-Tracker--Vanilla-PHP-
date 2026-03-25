@@ -23,13 +23,47 @@
     </nav>
 
     <main>
-        <h2>Home</h2>
-        <p>Hello, and welcome to the Call of Duty Zombies local stat tracker!</p>
-        <p>This project aims to build a local stat tracker for anyone who plays a lot of the old Call of Duty zombies games in offline single-player or split-screen modes.</p>
+        
+        <div id="intro">
+            <h2>Home</h2>
+            <p>Hello, and welcome to the Call of Duty Zombies local stat tracker!</p>
+            <p>This project aims to build a local stat tracker for anyone who plays a lot of the old Call of Duty zombies games in offline single-player or split-screen modes.</p>
+        </div>
+
+        <a id="new" href="#">
+            <div class="home-page-link">
+                <h2>"The Mystery Box" - ADD RECORD</h2>
+                <p>Add a record of a recent single-player or split-screen zombies match.</p>
+            </div>
+        </a>
+
+        <a id="view-all" href="#">
+            <div class="home-page-link">
+                <h2>"Fetch Me Their Souls" - VIEW MATCH RECORDS</h2>
+                <p>View all records of all matches recorded so far.</p>
+            </div>
+        </a>
+
+        <a id="search" href="#">
+            <div class="home-page-link">
+                <h2>"Easter Egg Hunt" - SEARCH RECORDS</h2>
+                <p>Look here to search for specifics, such as specific map stats, round records or specific player stats.</p>
+            </div>
+        </a>
+
+        <a id="delete" href="#">
+            <div class="home-page-link">
+                <h2>"Bye Bye" - DELETE RECORD</h2>
+                <p>Mainly for the purposes of setting a record straight in the event of a mistake made in entry, records can be deleted here.</p>
+            </div>
+        </a>
+
     </main>
 
     <footer>
-        <h3>Created by Lee Gallagher DDCC &copy; <?php date("Y")?></h3>
+        <?php
+        echo "<h3>Created by Lee Gallagher DDCC &copy; " . date("Y") . "</h3>"
+        ?>
     </footer>
 
 </body>
