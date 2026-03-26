@@ -28,13 +28,13 @@
     <h2>ADD NEW RECORD</h2>
 
     <div id="add-new-form">
-        <form action="includes/add-record-formhandler" method="post">
+        <form action="includes/add-record-formhandler.inc.php" method="post">
             <label for="game">Game</label>
             <input type="text" id="game" name="game" placeholder="Enter Game (Black Ops 1, World at War etc.)">
             <br>
 
-            <label for="map">Map</label>
-            <input type="text" id="map" name="map" placeholder="Enter Map Name">
+            <label for="maps">Map</label>
+            <input type="text" id="maps" name="maps" placeholder="Enter Map Name">
             <br>
 
             <label for="no_of_players"># of Players</label>
