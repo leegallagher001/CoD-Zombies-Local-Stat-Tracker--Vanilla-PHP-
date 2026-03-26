@@ -25,7 +25,15 @@
 
     <main>
 
-    <h2>UNDER CONSTRUCTION</h2>
+    <h2>DELETE RECORD</h2>
+
+    <div id="delete-form-container">
+        <p>Please copy the date & time of the record you wish to delete on the "View Records" page into the form below</p>
+        <form id="delete-match" action="includes/delete-record-formhandler.inc.php" method="post">
+            <input type="text" id="created_at" name="created_at" placeholder="Enter Date/Time To Be Deleted">
+            <button>Delete Record</button>
+        </form>
+    </div>
 
     </main>
 

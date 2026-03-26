@@ -58,6 +58,7 @@ try {
         echo "</div>";
     } else { // if matches ARE inside array (what we want)
         foreach($results as $result) { // breaks each match entry in the array into something we can work with
+            echo "<br>";
             echo "<strong>Match Date: " . htmlspecialchars($result["created_at"]) . "</strong>";
             echo "<br>";
             echo "Game: " . htmlspecialchars($result["game"]);
