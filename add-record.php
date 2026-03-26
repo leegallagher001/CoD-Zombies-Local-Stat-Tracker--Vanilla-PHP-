@@ -25,7 +25,54 @@
 
     <main>
 
-    <h2>UNDER CONSTRUCTION</h2>
+    <h2>ADD NEW RECORD</h2>
+
+    <div id="add-new-form">
+        <form action="includes/add-record-formhandler" method="post">
+            <label for="game">Game</label>
+            <input type="text" id="game" name="game" placeholder="Enter Game (Black Ops 1, World at War etc.)">
+            <br>
+
+            <label for="map">Map</label>
+            <input type="text" id="map" name="map" placeholder="Enter Map Name">
+            <br>
+
+            <label for="no_of_players"># of Players</label>
+            <input type="number" id="no_of_players" name="no_of_players" placeholder="0">
+            <br>
+
+            <label for="points">Points</label>
+            <input type="number" id="points" name="points" placeholder="00">
+            <br>
+
+            <label for="kills">Kills</label>
+            <input type="number" id="kills" name="kills" placeholder="00">
+            <br>
+
+            <label for="downs">Downs</label>
+            <input type="number" id="downs" name="downs" placeholder="00">
+            <br>
+
+            <label for="revives">Revives</label>
+            <input type="number" id="revives" name="revives" placeholder="00">
+            <br>
+
+            <label for="headshots">Headshots</label>
+            <input type="number" id="headshots" name="headshots" placeholder="00">
+            <br>
+
+            <label for="round_reached">Round Reached</label>
+            <input type="number" id="round_reached" name="round_reached" placeholder="00">
+            <br>
+
+            <label for="comments">Comments</label>
+            <input type="text" id="comments" name="comments" placeholder="Additional comments...">
+            <br>
+
+            <button>Submit New Match</button>
+            <br>
+        </form>
+    </div>
 
     </main>
 
