@@ -116,6 +116,22 @@ input {
 
 /* View Records Page (view-records.php) */
 
+.dashboard {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dashboard_element {
+    background-color: burlywood;
+    color: black;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+
 .current_entry {
     background-color: beige;
     color: black;

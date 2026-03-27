@@ -30,7 +30,7 @@
             <p>This project aims to build a local stat tracker for anyone who plays a lot of the old Call of Duty zombies games in offline single-player or split-screen modes.</p>
         </div>
 
-        <a id="new" href="add-record-php">
+        <a id="new" href="add-record.php">
             <div class="home-page-link">
                 <h2>"The Mystery Box" - ADD RECORD</h2>
                 <p>Add a record of a recent single-player or split-screen zombies match.</p>

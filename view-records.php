@@ -28,7 +28,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoD Zombies Stat Tracker - Home</title>
+    <title>CoD Zombies Stat Tracker - View Records</title>
     <link rel="stylesheet" href="CSS/main.css">
 </head>
 
@@ -57,7 +57,42 @@ try {
         echo "<p>There were no results - no matches recorded!</p>";
         echo "</div>";
     } else { // if matches ARE inside array (what we want)
+        static $totalMatches = 0;
+        static $totalPoints = 0;
+        static $totalKills = 0;
+
+        /* First for-each loop is for calculating the numbers for the dashboard - this
+        allows us to create the dashboard at the top of the page */
+
+        foreach($results as $result) { 
+            $totalMatches++;
+            $totalKills = $totalKills + $result["kills"];                       
+            $totalPoints = $totalPoints + $result["points"];
+        }
+
+        echo "<div class='dashboard'>";
+        echo "<div class='dashboard_element'>";
+        echo "<p>Total Matches</p>";
+        echo "<h1>" . htmlspecialchars($totalMatches) . "</h1>";
+        echo "</div>";
+        echo "<div class='dashboard_element'>";
+        echo "<p>Total Points</p>";
+        echo "<h1>" . htmlspecialchars($totalPoints) . "</h1>";
+        echo "</div>";
+        echo "<div class='dashboard_element'>";
+        echo "<p>Total Kills</p>";
+        echo "<h1>" . htmlspecialchars($totalKills) . "</h1>";
+        echo "</div>";
+        echo "</div>";
+
+        /* Second for-each loop serves as the print-out of the figures 
+        for each match recorded in the database - there are other data points 
+        recorded (downs, revives, number of players etc.) but I feel like those
+        could be better worked into the "search records" page, where there will 
+        be somewhat less records on display at once */
+
         foreach($results as $result) { // breaks each match entry in the array into something we can work with
+            
             echo "<br>";
             echo "<div class='current_entry'>";
             echo "<div class='entry_header'>";
