@@ -59,28 +59,20 @@ try {
     } else { // if matches ARE inside array (what we want)
         foreach($results as $result) { // breaks each match entry in the array into something we can work with
             echo "<br>";
-            echo "<strong>Match Date: " . htmlspecialchars($result["created_at"]) . "</strong>";
-            echo "<br>";
-            echo "Game: " . htmlspecialchars($result["game"]);
-            echo "<br>";
-            echo "Map: " . htmlspecialchars($result["maps"]);
-            echo "<br>";
-            echo "# Of Players: " . htmlspecialchars($result["no_of_players"]);
-            echo "<br>";
-            echo "Points: " . htmlspecialchars($result["points"]);
-            echo "<br>";
-            echo "Kills:: " . htmlspecialchars($result["kills"]);
-            echo "<br>";
-            echo "Downs: " . htmlspecialchars($result["downs"]);
-            echo "<br>";
-            echo "Revives: " . htmlspecialchars($result["revives"]);
-            echo "<br>";
-            echo "Headshots: " . htmlspecialchars($result["headshots"]);
-            echo "<br>";
-            echo "Round Reached: " . htmlspecialchars($result["round_reached"]);
-            echo "<br>";
-            echo "Extra Comments: " . htmlspecialchars($result["comments"]);
-            echo "<br>";
+            echo "<div class='current_entry'>";
+            echo "<div class='entry_header'>";
+            echo "<h4>Match Date: " . htmlspecialchars($result["created_at"]) . "</h4>";
+            echo "<h4>Game: " . htmlspecialchars($result["game"]) . "</h4>";
+            echo "<h4>Map: " . htmlspecialchars($result["maps"]) . "</h4>";
+            echo "</div>";
+            echo "<div class='entry_content'>";
+            echo "<p>Points: " . htmlspecialchars($result["points"]) . "</p>";
+            echo "<p>Kills: " . htmlspecialchars($result["kills"]) . "</p>";
+            echo "<p>Headshots: " . htmlspecialchars($result["headshots"]) . "</p>";
+            echo "<p>Round Reached: " . htmlspecialchars($result["round_reached"]) . "</p>";
+            echo "<p>Extra Comments: " . htmlspecialchars($result["comments"]) . "</p>";
+            echo "</div>";
+            echo "</div>";
         }
     }
     ?>

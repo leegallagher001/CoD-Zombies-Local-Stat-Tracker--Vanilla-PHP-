@@ -114,9 +114,39 @@ input {
   box-sizing: border-box;
 }
 
+/* View Records Page (view-records.php) */
+
+.current_entry {
+    background-color: beige;
+    color: black;
+    font-size: 14pt;
+}
+
+.entry_header {
+    font-size: 18pt;
+    background-color: brown;
+    color: beige;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.entry_header h4 {
+    padding: 0px 10px 0px 10px;
+}
+
+.entry_content {
+    padding: 20px 0px 10px 0px;
+}
+
+.entry_content p {
+    margin-left: 25px;
+}
+
 /* Footer */
 
 footer {
+    margin-top: 10px;
     display: inline-block;
     width: 100%;
     background-color: black;
