@@ -66,22 +66,22 @@ try {
 
         foreach($results as $result) { 
             $totalMatches++;
-            $totalKills = $totalKills + $result["kills"];                       
-            $totalPoints = $totalPoints + $result["points"];
+            $totalKills = $totalKills + htmlspecialchars($result["kills"]);                       
+            $totalPoints = $totalPoints + htmlspecialchars($result["points"]);
         }
 
         echo "<div class='dashboard'>";
         echo "<div class='dashboard_element'>";
         echo "<p>Total Matches</p>";
-        echo "<h1>" . htmlspecialchars($totalMatches) . "</h1>";
+        echo "<h1>" . $totalMatches . "</h1>";
         echo "</div>";
         echo "<div class='dashboard_element'>";
         echo "<p>Total Points</p>";
-        echo "<h1>" . htmlspecialchars($totalPoints) . "</h1>";
+        echo "<h1>" . $totalPoints . "</h1>";
         echo "</div>";
         echo "<div class='dashboard_element'>";
         echo "<p>Total Kills</p>";
-        echo "<h1>" . htmlspecialchars($totalKills) . "</h1>";
+        echo "<h1>" . $totalKills . "</h1>";
         echo "</div>";
         echo "</div>";
 
