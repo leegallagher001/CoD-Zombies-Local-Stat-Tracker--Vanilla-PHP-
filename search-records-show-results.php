@@ -112,6 +112,48 @@ try {
         </form>
     </div>
 
+    <?php
+
+    $dataSearch = $_POST["search"]; // takes the data to be searched 
+    static $searchResults = []; // set up an array to store matching searches in
+    
+    foreach ($results as $result) { // loops through ALL entries
+
+        if (htmlspecialchars($result["game"] === $dataSearch)) { // if a record's "game" field matches the search criteria
+
+            array_push($searchResults, $result); // adds that record to the array
+
+        }
+
+        if (htmlspecialchars($result["maps"] === $dataSearch)) { // if a record's "maps" field matches the search criteria
+
+            array_push($searchResults, $result); // adds that record to the array
+
+        }
+    }
+
+    foreach ($searchResults as $searchResult) { // prints records from the array to the screen
+
+        echo "<br>";
+        echo "<div class='current_entry'>";
+        echo "<div class='entry_header'>";
+        echo "<h4>Match Date: " . htmlspecialchars($searchResult["created_at"]) . "</h4>";
+        echo "<h4>Game: " . htmlspecialchars($searchResult["game"]) . "</h4>";
+        echo "<h4>Map: " . htmlspecialchars($searchResult["maps"]) . "</h4>";
+        echo "</div>";
+        echo "<div class='entry_content'>";
+        echo "<p>Points: " . htmlspecialchars($searchResult["points"]) . "</p>";
+        echo "<p>Kills: " . htmlspecialchars($searchResult["kills"]) . "</p>";
+        echo "<p>Headshots: " . htmlspecialchars($searchResult["headshots"]) . "</p>";
+        echo "<p>Round Reached: " . htmlspecialchars($searchResult["round_reached"]) . "</p>";
+        echo "<p>Extra Comments: " . htmlspecialchars($searchResult["comments"]) . "</p>";
+        echo "</div>";
+        echo "</div>";
+
+    }
+
+    ?>
+
     </main>
 
     <footer>
