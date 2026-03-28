@@ -49,6 +49,10 @@ nav {
 
 /* Main */
 
+main {
+    padding-bottom: 70px;
+}
+
 /* Home page (index.php) */
 
 #intro, .home-page-link {
@@ -162,6 +166,8 @@ input {
 /* Footer */
 
 footer {
+    position: fixed;
+    bottom: 0;
     margin-top: 10px;
     display: inline-block;
     width: 100%;

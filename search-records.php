@@ -93,7 +93,7 @@ try {
         echo "<h1>" . $topKills . "</h1>";
         echo "</div>";
         echo "<div class='dashboard_element'>";
-        echo "<p>Highest Score Reached</p>";
+        echo "<p>Highest Round Reached</p>";
         echo "<h1>" . $highestRound . "</h1>";
         echo "</div>";
         echo "</div>";
