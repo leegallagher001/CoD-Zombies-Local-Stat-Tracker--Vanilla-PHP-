@@ -27,6 +27,9 @@
 
     <h2>ADD NEW RECORD</h2>
 
+    <p>Use this page to add records of recent matches. For now, this only includes overall stats for the match, however I eventually hope to implement a way of doing it where each player of the match has their own stats, allowing for some...friendly competition.</p>
+    <p>Also, the time recorded at the moment is the time when the data entry is made, not the time of the match itself. This is also something I'm looking to improve in the future, as I think it would be quite neat to tell the exact time a match was played.</p>
+
     <div id="add-new-form">
         <form action="includes/add-record-formhandler.inc.php" method="post">
             <label for="game">Game</label>

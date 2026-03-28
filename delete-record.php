@@ -29,6 +29,7 @@
 
     <div id="delete-form-container">
         <p>Please copy the date & time of the record you wish to delete on the "View Records" page into the form below</p>
+        <p>This should be in the exact format shown in the record ("0000-00-00 00:00:00").</p>
         <form id="delete-match" action="includes/delete-record-formhandler.inc.php" method="post">
             <input type="text" id="created_at" name="created_at" placeholder="Enter Date/Time To Be Deleted">
             <button>Delete Record</button>

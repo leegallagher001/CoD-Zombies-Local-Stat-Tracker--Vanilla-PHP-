@@ -49,7 +49,7 @@ try {
 
     <main>
 
-    <h2>VIEW RECORDS</h2>
+    <h2>TOTAL MATCH STATS</h2>
 
     <?php 
     if (empty($results)) { // if no data inside array (due to no comments present, invalid username etc)
@@ -90,6 +90,8 @@ try {
         recorded (downs, revives, number of players etc.) but I feel like those
         could be better worked into the "search records" page, where there will 
         be somewhat less records on display at once */
+
+        echo "<h2>VIEW ALL MATCH RECORDS</h2>";
 
         foreach($results as $result) { // breaks each match entry in the array into something we can work with
             
